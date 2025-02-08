@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Versace from "/public/versace.png"
-import Calvin from "/public/calvin.png"
+import Calvin from "/public/cop.png"
 import Prada from "/public/prada.png"
 import Zara from "/public/zara.png"
 import Gucci from "/public/gucci.png"
