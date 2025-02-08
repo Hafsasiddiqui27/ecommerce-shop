@@ -4,10 +4,10 @@ import { Facebook } from 'lucide-react';
 import { Instagram } from 'lucide-react';
 import { Github } from 'lucide-react';
 import Image from "next/image";
-// import Stayudpate from "./update";
+import { Mail } from 'lucide-react';
 import { Button } from "../ui/button";
 import Payment from "/public/payment.png";
-import { AiOutlineMail } from "react-icons/ai";
+
 
 
 export default function Footer(){
@@ -27,7 +27,7 @@ export default function Footer(){
                 </div>
                 {/* right */}
                 <div className="space-y-4 mt-2">
-                <div className="  flex justify-start items-center bg-[#F0F0F0] md:w-[300px] h-[35px] pl-2 md:ml-0 hover:border-none rounded-full"> <AiOutlineMail/> <input   placeholder={`Enter your email address`}  className="bg-[#F0F0F0] w-[90%] rounded-full h-full  ml-2"/></div>
+                <div className="  flex justify-start items-center bg-[#F0F0F0] md:w-[300px] h-[35px] pl-2 md:ml-0 hover:border-none rounded-full"> <Mail/> <input   placeholder={`Enter your email address`}  className="bg-[#F0F0F0] w-[90%] rounded-full h-full  ml-2"/></div>
                 <button className="w-full  text-sm border bg-white py-2 px-10 rounded-[20px]" >Subscribe to Newsletter</button>
 
                 </div>
