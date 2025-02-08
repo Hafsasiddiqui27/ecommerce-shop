@@ -6,10 +6,9 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import TopSell from "../topsell";
-// import { BreadcrumbCollapsed } from "@/components/Breadcrupm";
+import { BreadcrumbCollapsed } from "@/components/layout/Breadcrump";
 import { useDispatch } from "react-redux";
 import { add } from "@/app/Redux/features/cartSlice";
-import { Button } from "@/components/ui/button";
 import Toastify from "@/app/cart/toastify";
 
 
@@ -100,14 +99,14 @@ interface Iproducts {
 
   if (error || !product) {
     return <div className="mt-36 text-red-500 text-center font-bold">
-       {/* <BreadcrumbCollapsed/> */}
+       <BreadcrumbCollapsed/>
       Product not found</div>;
   }
 
   return(
     <>
     <div className="mt-28 md:mt-36">
-       {/* <BreadcrumbCollapsed/> */}
+       <BreadcrumbCollapsed/>
       <div className="flex h-full items-center flex-col md:flex-row justify-center sm:justify-evenly  sm:p-0 max-w-screen-2xl mx-auto">
         {/* Left */}
         <div className="flex space-x-4 md:space-x-0  md:space-y-3 p-5 md:flex-col justify-between items-center md:w-[200px]  order-2 md:order-1">
@@ -228,7 +227,7 @@ interface Iproducts {
         </div>
       </div>
     </div>
-      {/* <CustomerTestimonials/> */}
+     
       <TopSell/>
     </>
   )
