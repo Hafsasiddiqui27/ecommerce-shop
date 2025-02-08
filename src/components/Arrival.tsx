@@ -13,15 +13,15 @@ import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react'
-import { FaStar } from "react-icons/fa";
+import { Star } from 'lucide-react';
 import { Button } from "./ui/button"
 // Star icons array
 const star = [
-  <FaStar key={1} />,
-  <FaStar key={2} />,
-  <FaStar key={3} />,
-  <FaStar key={4} />,
-  <FaStar key={5} />,
+  <Star key={1} />,
+  <Star key={2} />,
+  <Star key={3} />,
+  <Star key={4} />,
+  <Star key={5} />,
 ];
 
 interface Iproducts {

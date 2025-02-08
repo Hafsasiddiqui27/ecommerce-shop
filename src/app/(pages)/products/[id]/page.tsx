@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import { Star } from 'lucide-react';
 import { Minus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
@@ -15,11 +15,11 @@ import Toastify from "@/app/cart/toastify";
 
 // Adding key prop in star array
 let star = [
-    <FaStar key={1} />,
-    <FaStar key={2} />,
-    <FaStar key={3} />,
-    <FaStar key={4} />,
-    <FaStar key={5} />,
+    <Star key={1} />,
+    <Star key={2} />,
+    <Star key={3} />,
+    <Star key={4} />,
+    <Star key={5} />,
   ];
   
   

@@ -1,15 +1,15 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { urlFor } from "@/sanity/lib/image";
-import { Divide, Minus, Plus } from "lucide-react";
+
+import { Minus, Plus } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { MdDelete } from "react-icons/md";
+import { Trash2 } from 'lucide-react';
 import { useDispatch, useSelector } from "react-redux";
-// import { addition, remove, subraction } from "../Redux/features/cart";
+
 import Link from "next/link";
 import { addition, remove, subraction } from "../Redux/features/cartSlice";
-// import { addition, delItem, subraction } from "../Redux/features/cart";
+
 
 const Cartpage = () => {
  
@@ -50,7 +50,7 @@ const Cartpage = () => {
                             </div>
                        </div>
                             <div className="relative ">
-                            <button onClick={()=>handleremove(data.uuid)} > <MdDelete /></button>
+                            <button onClick={()=>handleremove(data.uuid)} > <Trash2 /></button>
                               <div className="md:w-[100px] h-[40px] flex justify-center  lg:justify-between p-3 items-center rounded-[62px] bg-[#F0F0F0] text-gray-400 absolute bottom-0 right-0 ">
                               <button onClick={()=>dispatch(subraction(data))} ><Minus/></button>
                              {data.qty}
