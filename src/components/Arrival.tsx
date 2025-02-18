@@ -1,28 +1,13 @@
 "use client"
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+
  
 import { client } from '@/sanity/lib/client'
 import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react'
-import { Star } from 'lucide-react';
+
 import { Button } from "./ui/button"
-// Star icons array
-const star = [
-  <Star key={1} />,
-  <Star key={2} />,
-  <Star key={3} />,
-  <Star key={4} />,
-  <Star key={5} />,
-];
 
 interface Iproducts {
   imageUrl: string;
@@ -113,12 +98,12 @@ interface Iproducts {
           </Link>
           <div className="pl-2">
             <p className="text-lg mt-2 font-bold">{data.name}</p>
-            <div className="flex text-yellow-400">
-              {star.map((icon, index) => (
-                <span key={index}>{icon}</span>
-              ))}
+            
+            <div className="flex">
+⭐⭐⭐⭐⭐
             </div>
-            <p className="font-bold mt-1">
+            
+            <p className="font-bold mt-1" >
               ${data.price.toFixed(2)}
               {data.discountPercent ? (
                 <span className="text-gray-400 font-bold line-through ml-2">

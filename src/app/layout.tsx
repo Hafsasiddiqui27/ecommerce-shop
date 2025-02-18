@@ -24,8 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
       <Providers>
       <Header />
-          <Link href={"/"}>Home</Link>
-          <Link href={"/cart"}>Cart</Link>
+          <Link href={"/"} className="bold mx-5  text-lg">Home</Link>
+          <Link href={"/cart"} className="bold text-lg">Cart</Link>
         {children}
         <Footer />
         </Providers>

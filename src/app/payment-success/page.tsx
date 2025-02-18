@@ -15,7 +15,7 @@ export default function PaymentSuccess() {
           </Link>
           <Link href="/genrate-tracking">
             <p className="inline-block text-center text-white bg-gray-500 hover:bg-gray-700 px-6 py-2 rounded-lg w-full">
-              Go to Token Page
+              Go to Home Page
             </p>
           </Link>
         </div>

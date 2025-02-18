@@ -8,16 +8,9 @@ import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react'
-import { Star } from 'lucide-react';
 
-// Star icons array
-const star = [
-  <Star key={1} />,
-  <Star key={2} />,
-  <Star key={3} />,
-  <Star key={4} />,
-  <Star key={5} />,
-];
+
+
 
 interface Iproducts {
   imageUrl: string;
@@ -42,7 +35,7 @@ interface Iproducts {
         setLoading(true);
         setError(null);
         const fetchedProducts: Iproducts[] = await client.fetch(
-          `*[_type == 'products']{
+          `*[_type == 'products' && category == 'hoodie']{ 
             "imageUrl": image.asset->url,
             category,
             discountPercent,
@@ -86,7 +79,7 @@ interface Iproducts {
   return (
     <div className="w-full mt-20 md:mt-36 h-full  max-w-screen-xl mx-auto">
     <h1 className="text-3xl md:text-4xl font-bold text-center">TOP SELLING</h1>
-    <div className="relative mt-10 overflow-x-auto flex space-x-5 px-8">
+    <div className="relative mt-10 flex space-x-5 px-8">
       {products.map((data) => (
         <div key={data._id} className="flex-shrink-0">
           <Link href={`/products/${data._id}`}>
@@ -108,10 +101,8 @@ interface Iproducts {
           </Link>
           <div className="pl-2">
             <p className="text-lg mt-2 font-bold">{data.name}</p>
-            <div className="flex text-yellow-400">
-              {star.map((icon, index) => (
-                <span key={index}>{icon}</span>
-              ))}
+            <div className="flex">
+⭐⭐⭐⭐⭐
             </div>
             <p className="font-bold mt-1">
               ${data.price.toFixed(2)}

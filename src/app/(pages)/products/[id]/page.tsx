@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Star } from 'lucide-react';
+
 import { Minus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
@@ -13,14 +13,7 @@ import Toastify from "@/app/cart/toastify";
 
 
 
-// Adding key prop in star array
-let star = [
-    <Star key={1} />,
-    <Star key={2} />,
-    <Star key={3} />,
-    <Star key={4} />,
-    <Star key={5} />,
-  ];
+
   
   
 interface Iproducts {
@@ -157,7 +150,9 @@ interface Iproducts {
         {/* Right */}
         <div className="w-full p-5 lg:w-[500px] lg:h-[500px]  order-3">
           <h1 className="text-2xl lg:text-3xl font-bold">{cartItem.name}</h1>
-          <div className="flex text-yellow-400">{star}</div>
+          <div className="flex">
+⭐⭐⭐⭐⭐
+            </div>
           <div className="flex items-center space-x-2">
             <p className="font-bold">{cartItem.price * cartItem.qty}</p>
             {cartItem.discount > 0 && (

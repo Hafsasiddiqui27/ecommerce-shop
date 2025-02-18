@@ -31,9 +31,9 @@ export default function Header() {
             {/* navigation bar */}
 
 
-             
-            <ul className="hidden xl:block ">
-                <li className="flex space-x-4 ml-4 mt-2 items-center ">
+             <div className="hidden xl:block ">
+            <ul className="flex gap-x-5 mt-2 items-center" >
+                <li className="flex">
                     
                 
                     <Link href={``}><NavigationMenuDemo/></Link>
@@ -49,6 +49,7 @@ export default function Header() {
             </li>
             
             </ul>
+            </div>
             {/* right */}
             {/* <Search/> */}
              <div className="flex justify-start items-center lg:bg-[#F0F0F0] lg:w-[500px] h-[40px] pl-2 ml-12 md:ml-0 hover:border-none rounded-full "> 
